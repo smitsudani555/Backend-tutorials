@@ -1,6 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
+import { SchemaTypeOptions } from "mongoose";
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -24,8 +25,8 @@ const userSchema = new mongoose.Schema({
         trim: true,
         index: true
     },
-    avtar: {
-        typr: String,      //cloudnary url
+    avatar: {
+        type: String,      //cloudnary url
         required: true
     },
     coverImage: {
